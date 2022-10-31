@@ -1,0 +1,32 @@
+{
+  "getContactsByLastName": [
+    {
+      "firstName": "Eric",
+      "id": "cl9r4gc5c00003ozacpx9ii4a",
+      "lastName": "Elliot",
+      "phoneNumber": "222-111-444",
+      "__typename": "Contact"
+    },
+    {
+      "firstName": "Steve",
+      "id": "cl9r7kwb700023uza7z23636u",
+      "lastName": "Jos",
+      "phoneNumber": "432-342-666",
+      "__typename": "Contact"
+    },
+    {
+      "firstName": "Fred",
+      "id": "cl9sbumvh0035zkza76wua09j",
+      "lastName": "Allen",
+      "phoneNumber": "444-666-333",
+      "__typename": "Contact"
+    },
+    {
+      "firstName": "Steve",
+      "id": "cl9scau640042zkzam6scr79f",
+      "lastName": "Wozniak",
+      "phoneNumber": "555-333-777",
+      "__typename": "Contact"
+    }
+  ]
+}

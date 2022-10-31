@@ -1,0 +1,11 @@
+{
+  "getContactsByLastName": [
+    {
+      "firstName": "Eric",
+      "id": "cl9r4gc5c00003ozacpx9ii4a",
+      "lastName": "Elliot",
+      "phoneNumber": "222-111-444",
+      "__typename": "Contact"
+    }
+  ]
+}
