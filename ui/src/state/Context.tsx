@@ -1,18 +1,13 @@
-import { createContext, ReactNode, useState } from "react";
-import { Contact } from "./type/Contact";
+import { createContext, ReactNode, useContext, useState } from "react";
 
 export interface PhoneBookContextData {
-  contacts: Contact[];
   searchQuery: string;
   setSearchQuery: (searchQuery: string) => void;
-  setContacts: (contacts: Contact[]) => void;
 }
 
 export const postsContextDefaultValue: PhoneBookContextData = {
-  contacts: [],
   searchQuery: "",
   setSearchQuery: () => {},
-  setContacts: () => {},
 };
 
 export const PhoneBookContext = createContext<PhoneBookContextData>(
@@ -26,18 +21,25 @@ type PhoneBookContextProviderProps = {
 export const PhoneBookContextProvider = ({
   children,
 }: PhoneBookContextProviderProps) => {
-  const [contacts, setContacts] = useState<Contact[]>([]);
   const [searchQuery, setSearchQuery] = useState("");
   return (
     <PhoneBookContext.Provider
       value={{
-        contacts,
         searchQuery,
         setSearchQuery,
-        setContacts,
       }}
     >
       {children}
     </PhoneBookContext.Provider>
   );
+};
+
+export const usePhoneBookContext = () => {
+  const context = useContext(PhoneBookContext);
+  if (context === undefined) {
+    throw new Error(
+      "usePhoneBookContext must be used within a PhoneBookContextProvider"
+    );
+  }
+  return context;
 };
