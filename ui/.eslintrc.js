@@ -18,6 +18,7 @@ module.exports = {
     "padded-blocks": ["error", "never"],
     "react/react-in-jsx-scope": "off",
     "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/no-explicit-any": "off",
     // semi: ["error", "never"],
   },
   plugins: ["@typescript-eslint"],
